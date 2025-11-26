@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title th:text="${title}">개인정보 처리방침</title>
+  <link rel="stylesheet" href="/css/legal.css">
+  <meta name="robots" content="noindex">
+  <style>
+    /* 표가 있으면 가독성 보강 */
+    table{width:100%;border-collapse:collapse;margin:16px 0}
+    th,td{border:1px solid #e5e7eb;padding:10px;text-align:left;vertical-align:top}
+    th{background:#f9fafb}
+    code{background:#f3f4f6;padding:2px 4px;border-radius:4px}
+  </style>
+</head>
+<body>
+<main class="legal-container">
+  <header class="legal-header">
+    <h1 th:text="${title}">개인정보 처리방침</h1>
+    <div class="legal-meta">최종 업데이트:
+      <span th:text="${#temporals.format(lastUpdated, 'yyyy.MM.dd')}">2025.10.01</span>
+    </div>
+    <nav class="legal-nav">
+      <a href="#toc">목차</a>
+      <a href="/terms">이용약관</a>
+      <a href="/board">← 게시판으로</a>
+    </nav>
+  </header>
+
+  <section id="toc" class="legal-content">
+    <h2>목차</h2>
+    <ol>
+      <li><a href="#section1">1. 총칙 및 적용 범위</a></li>
+      <li><a href="#section2">2. 수집하는 개인정보 항목</a></li>
+      <li><a href="#section3">3. 수집 방법</a></li>
+      <li><a href="#section4">4. 처리 목적</a></li>
+      <li><a href="#section5">5. 처리 및 보유 기간</a></li>
+      <li><a href="#section6">6. 제3자 제공</a></li>
+      <li><a href="#section7">7. 처리의 위탁</a></li>
+      <li><a href="#section8">8. 국외 이전</a></li>
+      <li><a href="#section9">9. 이용자 권리 및 행사 방법</a></li>
+      <li><a href="#section10">10. 쿠키 및 유사기술</a></li>
+      <li><a href="#section11">11. 개인정보의 안전성 확보조치</a></li>
+      <li><a href="#section12">12. 아동의 개인정보</a></li>
+      <li><a href="#section13">13. 자동화 의사결정</a></li>
+      <li><a href="#section14">14. 고지 의무 및 개정</a></li>
+      <li><a href="#section15">15. 개인정보 보호책임자 및 연락처</a></li>
+      <li><a href="#section16">부칙</a></li>
+    </ol>
+  </section>
+
+  <section class="legal-content">
+    <h2 id="section1">1. 총칙 및 적용 범위</h2>
+    <p><strong>[회사명/운영자명]</strong>(이하 “회사”)는 「개인정보 보호법」 등 관련 법령을 준수하며, 본 방침을 통해 이용자의 개인정보가 어떠한 목적과 방식으로 수집·이용·보관·파기되는지 알려드립니다.</p>
+
+    <h2 id="section2">2. 수집하는 개인정보 항목</h2>
+    <table>
+      <thead>
+      <tr><th>구분</th><th>항목</th><th>수집 시점</th></tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>필수</td>
+        <td>이메일, 비밀번호(해시 처리), 닉네임</td>
+        <td>회원가입</td>
+      </tr>
+      <tr>
+        <td>선택</td>
+        <td>프로필 이미지, 자기소개</td>
+        <td>회원정보 수정</td>
+      </tr>
+      <tr>
+        <td>자동 수집</td>
+        <td>서비스 이용기록, 접속 로그, IP, 쿠키, 기기·브라우저 정보</td>
+        <td>서비스 이용 시</td>
+      </tr>
+      <tr>
+        <td>고객지원</td>
+        <td>문의 이메일, 첨부파일, 연락처(선택)</td>
+        <td>문의 접수 시</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <h2 id="section3">3. 수집 방법</h2>
+    <ul>
+      <li>회원가입, 게시글/댓글 작성, 설정 변경 등 이용자 직접 입력</li>
+      <li>쿠키/로그 등 서비스 이용 과정에서 자동 생성</li>
+      <li>고객센터 문의, 이벤트 응모 등</li>
+    </ul>
+
+    <h2 id="section4">4. 처리 목적</h2>
+    <table>
+      <thead>
+      <tr><th>목적</th><th>세부 내용</th></tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>서비스 제공</td>
+        <td>회원 식별 및 인증, 게시판 이용, 알림 전송, 이용내역 관리</td>
+      </tr>
+      <tr>
+        <td>보안 및 안전</td>
+        <td>부정 이용 방지, 로그인 보안, 사고 예방 및 조사</td>
+      </tr>
+      <tr>
+        <td>고객지원</td>
+        <td>문의 응대, 불만 처리, 공지사항 전달</td>
+      </tr>
+      <tr>
+        <td>서비스 개선</td>
+        <td>이용 패턴 분석, 품질 향상, 기능 고도화(통계는 가급적 비식별/집계 형태)</td>
+      </tr>
+      <tr>
+        <td>법적 의무 준수</td>
+        <td>관계 법령 및 규정 준수, 분쟁 대응</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <h2 id="section5">5. 처리 및 보유 기간</h2>
+    <table>
+      <thead>
+      <tr><th>항목</th><th>보유 기간</th><th>근거</th></tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>계정 정보(이메일, 해시 비밀번호, 닉네임)</td>
+        <td>회원 탈퇴 시 즉시 파기 (부정 이용 방지를 위해 <strong>[최대 N일]</strong> 보관 후 파기 가능)</td>
+        <td>서비스 운영 및 보안</td>
+      </tr>
+      <tr>
+        <td>게시물/댓글</td>
+        <td>이용자 삭제 시 또는 회원 탈퇴 시(단, 타인의 권리보호·분쟁 대응을 위해 합리적 범위 내 백업 보관 가능)</td>
+        <td>정당한 이익 및 권리보호</td>
+      </tr>
+      <tr>
+        <td>접속 로그, IP</td>
+        <td><strong>[예: 3개월]</strong></td>
+        <td>보안/법령·정책 준수</td>
+      </tr>
+      <tr>
+        <td>고객지원 기록</td>
+        <td><strong>[예: 3년]</strong></td>
+        <td>민원 처리 및 분쟁 대응</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <h2 id="section6">6. 제3자 제공</h2>
+    <p>회사는 법령에 근거하거나 이용자의 별도 동의가 있는 경우를 제외하고 개인정보를 제3자에게 제공하지 않습니다. 제공이 필요한 경우 제공받는 자, 목적, 항목, 보유기간 등을 사전에 명확히 고지하고 동의를 받습니다.</p>
+
+    <h2 id="section7">7. 처리의 위탁</h2>
+    <p>원활한 서비스 제공을 위해 일부 업무를 위탁할 수 있습니다. 위탁 시에는 수탁사에 대해 개인정보 보호 관련 법령 준수, 기술·관리적 보호조치, 재위탁 제한, 관리·감독 의무 등을 계약에 반영합니다.</p>
+    <table>
+      <thead>
+      <tr><th>수탁사</th><th>위탁 업무</th><th>보유·이용 기간</th></tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>[예: (주)OOO 클라우드]</strong></td>
+        <td>인프라 운영 및 데이터 보관(백업 포함)</td>
+        <td>위탁 계약 종료 시까지</td>
+      </tr>
+      <tr>
+        <td><strong>[예: 이메일 발송 서비스]</strong></td>
+        <td>알림/인증 메일 발송</td>
+        <td>위탁 계약 종료 시까지</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <h2 id="section8">8. 국외 이전</h2>
+    <p>국외 클라우드 또는 해외 수탁사 이용 등으로 개인정보가 국외로 이전될 수 있는 경우, 이전받는 자(국가), 이전 일시·방법, 이전 항목, 이용 목적, 보유 기간 등 필요한 사항을 고지하고 관련 절차(동의 등)를 이행합니다. 현재 국외 이전 현황: <strong>[없음/아래 표 참조]</strong></p>
+    <table>
+      <thead>
+      <tr><th>이전받는 자(국가)</th><th>이전 목적</th><th>이전 항목</th><th>보유 기간</th></tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><strong>[예: OOO Inc. (US)]</strong></td>
+        <td>클라우드 호스팅</td>
+        <td>이용자 데이터의 일부(로그/이미지 등)</td>
+        <td>계약 종료 또는 목적 달성 시</td>
+      </tr>
+      </tbody>
+    </table>
+
+    <h2 id="section9">9. 이용자 권리 및 행사 방법</h2>
+    <ul>
+      <li>이용자는 언제든지 개인정보의 열람·정정·삭제·처리정지를 요구할 수 있습니다.</li>
+      <li>권리 행사는 이메일, 서비스 내 설정/문의 기능 등을 통해 가능하며, 회사는 법정 기한 내 지체 없이 조치합니다.</li>
+      <li>대리인을 통한 청구 시 위임장 등 소정의 서류가 필요할 수 있습니다.</li>
+    </ul>
+
+    <h2 id="section10">10. 쿠키 및 유사기술</h2>
+    <ul>
+      <li>쿠키는 이용자의 기기에 저장되는 작은 텍스트 파일로, 로그인 유지, 환경설정 저장, 서비스 개선 등에 활용됩니다.</li>
+      <li>브라우저 설정에서 쿠키 저장을 거부하거나 삭제할 수 있으나, 일부 기능 이용에 제한이 있을 수 있습니다.</li>
+    </ul>
+
+    <h2 id="section11">11. 개인정보의 안전성 확보조치</h2>
+    <ul>
+      <li><strong>기술적 조치</strong>: 비밀번호 해시 처리, 전송 구간 암호화(HTTPS), 접근통제, 로그 모니터링, 취약점 점검</li>
+      <li><strong>관리적 조치</strong>: 최소권한 원칙, 내부 관리계획 수립, 정기 교육, 수탁사 관리·감독</li>
+      <li><strong>물리적 조치</strong>: 서버 접근 통제, 백업/보관구역 접근 제한</li>
+    </ul>
+
+    <h2 id="section12">12. 아동의 개인정보</h2>
+    <p>회사는 <strong>[예: 만 14세 미만]</strong> 아동의 회원가입을 제한하거나, 법정대리인의 동의를 요구합니다. 해당 연령 기준은 서비스 정책 및 법령에 따라 조정될 수 있습니다.</p>
+
+    <h2 id="section13">13. 자동화 의사결정</h2>
+    <p>회사는 프로파일링 등 이용자에게 법적 효과 또는 유사한 중대한 영향을 미치는 자동화 의사결정을 실시하지 않습니다. 정책 변경 시 본 방침을 통해 고지합니다.</p>
+
+    <h2 id="section14">14. 고지 의무 및 개정</h2>
+    <p>본 방침의 내용 추가·삭제·수정 등 변경이 있을 경우, 시행 최소 7일 전(중요 변경은 30일 전)부터 서비스 공지사항 등을 통해 고지합니다.</p>
+
+    <h2 id="section15">15. 개인정보 보호책임자 및 연락처</h2>
+    <table>
+      <tbody>
+      <tr><td>책임자</td><td><strong>[성명/직책]</strong></td></tr>
+      <tr><td>담당부서</td><td><strong>[부서명]</strong></td></tr>
+      <tr><td>이메일</td><td><a href="mailto:[kimd02.dev@gmail.com]">[kimd02.dev@gmail.com]</a></td></tr>
+      <tr><td>주소</td><td><strong>[회사 주소]</strong></td></tr>
+      <tr><td>전화</td><td><strong>[연락처]</strong></td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="section16">부칙</h2>
+    <ul>
+      <li>공고일자: <strong>[YYYY.MM.DD]</strong></li>
+      <li>시행일자: <strong>[YYYY.MM.DD]</strong></li>
+      <li>버전: v<strong>[X.Y]</strong></li>
+    </ul>
+  </section>
+
+  <footer class="legal-footer">
+    문의: <a href="mailto:kimd02.dev@gmail.com">kimd02.dev@gmail.com</a> · ©
+    <span th:text="${#calendars.format(#calendars.createNow(), 'yyyy')}">2025</span> Community
+  </footer>
+</main>
+</body>
+</html>
