@@ -1,14 +1,18 @@
-# 노드 이미지
-FROM eclipse-temurin:21-jre-alpine
-
-# 작업 디렉토리 /app으로 설정
+FROM gradle:8.8-jdk21 AS builder
 WORKDIR /app
 
-# JAR 파일 컨테이너에 카피
-COPY build/libs/*.jar app.jar
+COPY build.gradle settings.gradle ./
+COPY gradle ./gradle
+RUN gradle build -x test || true
 
-# 8080 포트 사용
+COPY . .
+RUN gradle clean bootJar -x test
+
+FROM eclipse-temurin:21-jre-alpine
+WORKDIR /app
+
+COPY --from=builder /app/build/libs/*.jar app.jar
+
 EXPOSE 8080
 
-# 앱 실행 명령
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
