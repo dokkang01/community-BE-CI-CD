@@ -45,8 +45,8 @@ jobs:
 
       - name: Build and Push Backend Docker Image
         run: |
-          sudo docker build --platform linux/amd64 -t ${{ secrets.DOCKER_USERNAME }}/community-backend:v2 .
-          sudo docker push ${{ secrets.DOCKER_USERNAME }}/community-backend:v2
+          docker build --platform linux/amd64 -t ${{ secrets.DOCKER_USERNAME }}/community-backend:v2 .
+          docker push ${{ secrets.DOCKER_USERNAME }}/community-backend:v2
 
   deploy:
     needs: build-and-push-image
