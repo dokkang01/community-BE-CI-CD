@@ -56,10 +56,10 @@ jobs:
       - name: Deploy backend to EC2 via SSH
         uses: appleboy/ssh-action@v1.2.3
         with:
-          host: ${{ secrets.EC2_HOST }}       # EC2 퍼블릭 IP 또는 도메인
-          username: ${{ secrets.EC2_USER }}   # 예: ubuntu
+          host: ${{ secrets.SERVER_HOST }}       # EC2 퍼블릭 IP 또는 도메인
+          username: ${{ secrets.SERVER_USER }}   # 예: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }} # .pem 내용 전체
           script: |
-            cd /home/${{ secrets.EC2_USER }}/community-FE   # 👉 EC2에서 docker-compose.yml 있는 경로로 수정
+            cd /home/${{ secrets.SERVER_USER }}/community-FE   # 👉 EC2에서 docker-compose.yml 있는 경로로 수정
             sudo docker compose pull                   # 새 이미지 가져오기
             sudo docker compose up -d                  # 백그라운드로 재기동
