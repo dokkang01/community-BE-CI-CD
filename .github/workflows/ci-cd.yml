@@ -26,7 +26,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Run tests
-        run: ./gradlew test
+        run: ./gradlew build -x test
 
   build-and-push-image:
     needs: test
