@@ -90,7 +90,7 @@ jobs:
       - name: Deploy to EC2 via Docker Compose
         run: |
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
-            cd /home/${{ secrets.SERVER_USER }}/community-BE   # 👉 여기를 EC2에서 백엔드 프로젝트 위치로 수정
+            cd /home/${{ secrets.SERVER_USER }}/community-FE     
             sudo docker compose pull
             sudo docker compose up -d
           EOF
