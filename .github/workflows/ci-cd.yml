@@ -25,7 +25,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Run tests
-        run: ./gradlew test --tests "kakaotechbootcamp.communityservice.entity.CommentTest"
+        run: ./gradlew test --tests "kakaotechbootcamp.communityservice.entity.SimpleTest"
 
   build-and-push-image:
     needs: test
