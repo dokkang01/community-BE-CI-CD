@@ -1,6 +1,6 @@
 package kakaotechbootcamp.communityservice.service;
 
-import lombok.Value;
+import org.springframework.beans.factory.annotation.Value; //
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 import software.amazon.awssdk.services.s3.presigner.S3Presigner;
