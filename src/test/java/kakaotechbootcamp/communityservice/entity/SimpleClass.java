@@ -9,6 +9,6 @@ public class SimpleClass {
     void simpleCheck(){
         String result = "Hello".toUpperCase();
         assertThat(result).isEqualTo("HELLO");
-        
+
     }
 }
