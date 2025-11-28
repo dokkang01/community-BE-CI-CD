@@ -23,7 +23,6 @@ public class PostImage {
     public PostImage(String imageUrl, int position) {
         this.imageUrl = imageUrl;
         this.position = position;
-        this.post = post;
     }
 
     void setPost(Post post) {

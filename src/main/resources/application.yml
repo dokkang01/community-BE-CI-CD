@@ -13,6 +13,11 @@ spring:
         format_sql: true
         use_sql_comments: true
 
+app:
+  s3:
+    bucket: express-backend-roy
+    region: ap-northeast-2
+
   profiles:
     active: dev
 
