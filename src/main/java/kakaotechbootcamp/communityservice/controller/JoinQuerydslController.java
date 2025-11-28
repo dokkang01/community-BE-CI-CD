@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 @RestController
-@RequestMapping("/board")
+@RequestMapping("/api/board")
 public class JoinQuerydslController {
     private final JoinQuerydslService joinQuerydslService;
 
